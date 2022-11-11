@@ -2,6 +2,8 @@
 
   <div class="card">
 
+    <h1>Pokémon</h1>
+
     <img :src="pokemon.sprites.front_default" alt="">
 
     <div class="info">
@@ -12,7 +14,7 @@
 
       <p>
         HP:
-        {{ pokemon.stats[0].base_stat }}
+        {{ pokemon.stats[0].base_stat }} points
       </p>
 
       <p>Types:</p>
@@ -26,8 +28,6 @@
     <button @click="newPokemon">New Pokemon!</button>
 
   </div>
-
-
 
 </template>
 
@@ -78,16 +78,20 @@ export default {
   width: 200px;
 }
 
+h1 {
+  text-align: center;
+  padding-top: 10px;
+}
+
 img {
   margin: auto;
   display: block;
-  padding: 16px;
 }
 
 .info {
   margin: auto;
   display: block;
-  padding: 0 20px;
+  padding: 12px 24px;
 }
 
 p, li {
@@ -96,7 +100,8 @@ p, li {
 }
 
 ul{
-  list-style-type:none;
+  margin-left: -8px;
+  list-style-type: disc;
 }
 
 button {
